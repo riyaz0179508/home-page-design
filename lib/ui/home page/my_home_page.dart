@@ -85,51 +85,57 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 40.h),
-            ElevatedButton(onPressed: () {}, child: Text("Tesing")),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xffFAE5DD)
+              ),
+                onPressed: () {}, child: Text("Tesing", style: TextStyle(color: Colors.black87),)),
             SizedBox(height: 40.h),
-            Container(
-                height: 150.h,
-                width: double.maxFinite,
-                decoration: BoxDecoration(
-                  color: Color(0xffE8F5E9),
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.3),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
-                ),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      "assets/images/gas.png",
-                      height: 150.h,
-                      width: 100.w,
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("Buy Cooking Gas and other\n cooking Accessories"),
-                        Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: Container(
-                            height: 40.h,
-                            width: 100,
-                            decoration: BoxDecoration(
-                                color: Colors.lightBlue,
-                                borderRadius: BorderRadius.circular(60)),
-                            child: Center(
-                                child: Text("Buy Gas",
-                                    style: TextStyle(color: Colors.white))),
+            Card(
+              child: Container(
+                  height: 150.h,
+                  width: double.maxFinite,
+                  decoration: BoxDecoration(
+                    color: Color(0xffE8F5E9),
+                    borderRadius: BorderRadius.circular(5),
+                    boxShadow: [
+                      // BoxShadow(
+                      //   color: Colors.grey.withOpacity(0.3),
+                      //   spreadRadius: 5,
+                      //   blurRadius: 7,
+                      //   offset: Offset(0, 3), // changes position of shadow
+                      // ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/images/gas.png",
+                        height: 150.h,
+                        width: 100.w,
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Buy Cooking Gas and other\n cooking Accessories"),
+                          Padding(
+                            padding: const EdgeInsets.all(15),
+                            child: Container(
+                              height: 40.h,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                  color: Colors.lightBlue,
+                                  borderRadius: BorderRadius.circular(60)),
+                              child: Center(
+                                  child: Text("Buy Gas",
+                                      style: TextStyle(color: Colors.white))),
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
-                )),
+                        ],
+                      ),
+                    ],
+                  )),
+            ),
           ],
         ),
       ),
